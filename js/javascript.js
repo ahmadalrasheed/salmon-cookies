@@ -10,7 +10,10 @@ let seattle={
     working_hours:['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :','total : '],
 
 
-    numofcx: function(min,max){
+    numofcx: function(){
+        let min = Math.ceil(this.min_num_cus);
+        let max = Math.floor(this.max_num_cus);
+
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
 
@@ -103,7 +106,10 @@ let tokyo={
     working_hours:['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :','total : '],
 
 
-    numofcx: function(min,max){
+    numofcx: function(){
+        let min = Math.ceil(this.min_num_cus);
+        let max = Math.floor(this.max_num_cus);
+
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
 
@@ -196,7 +202,10 @@ let Dubai={
     working_hours:['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :','total : '],
 
 
-    numofcx: function(min,max){
+    numofcx: function(){
+        let min = Math.ceil(this.min_num_cus);
+        let max = Math.floor(this.max_num_cus);
+
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
 
@@ -285,7 +294,10 @@ let Paris={
     working_hours:['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :','total : '],
 
 
-    numofcx: function(min,max){
+    numofcx: function(){
+        let min = Math.ceil(this.min_num_cus);
+        let max = Math.floor(this.max_num_cus);
+
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
 
@@ -377,7 +389,10 @@ let Lima={
     working_hours:['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :','total : '],
 
 
-    numofcx: function(min,max){
+    numofcx: function(){
+        let min = Math.ceil(this.min_num_cus);
+        let max = Math.floor(this.max_num_cus);
+
         return Math.floor(Math.random() * (max - min + 1) + min)
     },
 
