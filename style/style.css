@@ -1,9 +1,41 @@
+*{
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+
 img{height: 300px;width: 400px;}
+
 
 p{font-size: 30px;}
 
+
 html{background-color: blanchedalmond;}
+
 
 table tr td {border: 1px solid;}
 
+
+header h1,p{text-align: center;font-family: Georgia, serif;margin: 10px 10px;}
+
+
+header nav ul li a{text-decoration: none;color: #2D2D2D;}
+
+
+header nav ul li {display: inline;padding: 100px;margin-left: 140px;margin-top: 30px;}
+
+
+header{position: relative;}
+
+
+.sections{text-align: center;padding: 20px;}
+
+
+.maintables{margin-left: 545px;height: 80px;margin-top: 20px;}
+
+table{margin: 50px 0 0 300px;}
+
+
+
+/* header nav{height:100px;} */
 
