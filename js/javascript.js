@@ -11,7 +11,7 @@ let working_hours1=[' 6:00am  ',' 7:00am  ',' 8:00am  ','9:00am  ','10:00am  ','
 
 
 let objects_array =[];
-function stores(store_location,min_num_cus,max_num_cus,avg_num_cookie,store_image){
+function stores(store_location,min_num_cus,max_num_cus,avg_num_cookie){
 
     this.working_hours=[' 6:00am  ',' 7:00am  ',' 8:00am  ','9:00am  ','10:00am  ','11:00am  ','12:00pm  ','1:00pm  ','2:00pm  ','3:00pm  ','4:00pm  ','5:00pm  ','6:00pm  ','7:00pm  ',' total'];
 
@@ -21,7 +21,7 @@ function stores(store_location,min_num_cus,max_num_cus,avg_num_cookie,store_imag
     this.min_num_cus=min_num_cus;
     this.max_num_cus=max_num_cus;
     this.avg_num_cookie=avg_num_cookie;
-    this.store_image=store_image;
+    // this.store_image=store_image;
     this.num_of_cx=0;
     this.amount_of_cookies=[];
     this.total=0;
@@ -31,7 +31,7 @@ function stores(store_location,min_num_cus,max_num_cus,avg_num_cookie,store_imag
 
 }
 
-stores.prototype.numofcx = function(){
+stores.prototype.numofcx = function(min_num_cus,max_num_cus){
     return this.num_of_cx = Math.floor(Math.random() * (this.max_num_cus - this.min_num_cus + 1) + this.min_num_cus);
     
  
@@ -144,6 +144,12 @@ function FooterR(){
 
 
 }
+
+
+stores.prototype.newStores=function(){
+
+
+}
     
 
 
@@ -180,7 +186,64 @@ for (let i = 0; i < objects_array.length; i++) {
     objects_array[i].numofcookies();
     objects_array[i].render();
 }
+
 FooterR();
+
+
+
+
+let FormEl=document.getElementById("myForm");
+FormEl.addEventListener("submit",AddStore);
+
+function AddStore(event){
+    event.preventDefault();
+    let StoreLocation=event.target.StoreLocation.value;
+    let MinimumNumber=Number(event.target.MinimumNumber.value);
+    let MaximumNumber=Number(event.target.MaximumNumber.value);
+    let AverageNumber=Number(event.target.AverageNumber.value);
+
+    let Formstore= new stores(StoreLocation,MinimumNumber,MaximumNumber,AverageNumber)
+
+    // Formstore.numofcx(MinimumNumber,MaximumNumber)
+    
+    // console.log(Formstore.amount_of_cookies);
+    // console.log(Formstore.min_num_cus,Formstore.max_num_cus,Formstore.avg_num_cookie);
+    // console.log(Formstore.numofcx(MinimumNumber,MaximumNumber))
+    
+    tableEl.deleteRow(tableEl.rows.length - 1)
+    Formstore.numofcx();
+    Formstore.numofcookies();
+    Formstore.render();
+    FooterR();
+
+
+    // Formstore.TableHead();
+    // for (let i = 0; i < objects_array.length; i++) {
+    // objects_array[i].numofcx();
+    // objects_array[i].numofcookies();
+    // objects_array[i].render();
+    // }
+
+    // FooterR();
+    
+
+}
+
+
+
+
+
+
+// let labelEl=document.createElement("label");
+// FormEl.appendChild(labelEl)
+// labelEl.textContent("last label");
+// FormEl.addEventListener('submit',AddStore);
+
+// let labelEL=document.createElement("label");
+// console.log(labelEL);
+// console.log(FormEl);
+// labeleL.textContent=
+// FormEl.appendChild(labeleL);
 
 
 
