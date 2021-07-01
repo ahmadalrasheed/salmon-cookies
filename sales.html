@@ -8,12 +8,19 @@
     <title>salmoncookies</title>
 </head>
 <body>
-    <p>to go back to the home page click on this <a href="index.html">link</a></p>
-    <header><h1>salmon cookies</h1></header>
+    
+    <header>
+
+        <p>to go back to the home page click on this <a href="index.html">link</a></p>
+        <h1>salmon cookies</h1>
+
+    </header>
 
 
 
     <main>
+
+        <img id="salmon" src="http://saulfein.github.io/cookie-stand/img/salmon.png" alt="salmonm cookies" title="salmon cookies">
 
         <div id ="container"></div>
 
@@ -40,17 +47,18 @@
                     <legend>Adding New Store</legend>
                     <label for="StoreLocation">Store Location</label>
                     <input type="text" id="StoreLocation" name="StoreLocation"  placeholder="Enter Location">
+                    <br>
 
                     <label for="MinimumNumber" >Minimum Number of Customers</label>
-                    <input type="number" id="MinimumNumber" name="MinimumNumber">
-
+                    <input type="number" id="MinimumNumber" name="MinimumNumber" placeholder=" Enter Minimum Number" >
+                    <br>
                     <label for="MaximumNumber">Maximum Number of Customers</label>
-                    <input type="number" id="MaximumNumber" name="MaximumNumber" >
-
+                    <input type="number" id="MaximumNumber" name="MaximumNumber" placeholder="Enter Maximum Number" >
+                    <br>
                     <label for="AverageNumber">Average Number of Cookies Per customer</label>
-                    <input type="number" id="AverageNumber" name="AverageNumber" >
-                    
-                    <input type="submit" value="Add a Store">
+                    <input type="number" id="AverageNumber" name="AverageNumber" placeholder="Enter Average number of cookies" >
+                    <br>
+                    <input id="addastore" type="submit" value="Add a Store">
 
 
                 </fieldset>
@@ -60,12 +68,13 @@
         </div>
 
 
+
     </main>
 
 
 
 
-    <footer></footer>
+    <footer> &copy;AhmadAlRasheed</footer>
 
     <script src="js/javascript.js"></script>
     
